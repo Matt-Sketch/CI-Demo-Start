@@ -3,6 +3,17 @@
         <title>Add Employee Success</title>
     </head>
     <body>
-        Employee has been added successfully.
+
+	<h2>Submitted Employee Information</h2>
+	<table>
+		<tr>
+			<td>Name :</td>
+			<td>${employee.firstName} ${employee.lastName}</td>
+		</tr>
+		<tr>
+			<td>Email :</td>
+			<td>${employee.email}</td>
+		</tr>
+	</table>
     </body>
 </html>

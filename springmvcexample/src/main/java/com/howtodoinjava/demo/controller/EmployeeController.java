@@ -11,15 +11,13 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 
 import com.howtodoinjava.demo.model.EmployeeVO;
-import com.howtodoinjava.demo.service.EmployeeManager;
 
 @Controller
 @RequestMapping("/employee-module/addNew")
 @SessionAttributes("employee")
 public class EmployeeController
 {
-    @Autowired
-    EmployeeManager manager;
+
      
     @RequestMapping(method = RequestMethod.GET)
     public String setupForm(Model model)
@@ -63,7 +61,7 @@ public class EmployeeController
          
         //Mark Session Complete
         status.setComplete();
-        return "redirect:addNew/success";
+        return "addSuccess";
     }
      
     @RequestMapping(value = "/success", method = RequestMethod.GET)
